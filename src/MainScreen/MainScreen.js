@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainScreen.css' 
 import Video from './Video/Video'
-import Tabs from './Tabs/Tabs'
+import Tabs from './Tabs/Features'
 
 export default class MainScreen extends React.Component {
     render() {
