@@ -1,3 +1,7 @@
+/*
+https://reactnative.dev/docs/flexbox
+*/
+
 import React from 'react';
 import SideMenu from './SideMenu/SideMenu';
 import MainScreen from './MainScreen/MainScreen'
