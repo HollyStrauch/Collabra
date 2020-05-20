@@ -22,14 +22,11 @@
 .Video-icon {
   max-width:100%;
   max-height:100%;
-  
 }
 
 .Video-display {
   background-color: #eea7a7;
-  position: relative;
   flex: 1;
-  right: 2px;
   padding-top: 10px;
   padding-bottom: 20px;
   padding-right: 20px;
