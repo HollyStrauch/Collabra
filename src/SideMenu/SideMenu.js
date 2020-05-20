@@ -10,7 +10,8 @@ import ReactModal from 'react-modal';
 export default class SideMenu extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {modal1Open: true};
+        /* change this to true to make modal appear*/
+        this.state = {modal1Open: false};
       }
 
     render() {
