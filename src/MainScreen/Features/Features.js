@@ -2,6 +2,7 @@ import React from 'react';
 import './Features.css'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
+import Files from './Files/Files'
 
 export default class Features extends React.Component {
     render() {
@@ -14,8 +15,8 @@ export default class Features extends React.Component {
                     <Tab eventKey="profile" title="Profile">
                         <p>memememe</p>
                     </Tab>
-                    <Tab eventKey="contact" title="Contact">
-                        <p>memememe</p>
+                    <Tab eventKey="contact" title="Contact" className="Features-filetab">
+                        <Files />
                     </Tab>
                 </Tabs>
             </div>
