@@ -17,7 +17,6 @@ export default class Features extends React.Component {
                         <p>memememe</p>
                     </Tab>
                     <Tab eventKey="contact" title="Contact" className="Features-filetab">
-                        <p>test</p>
                         <Files />
                     </Tab>
                 </Tabs>
