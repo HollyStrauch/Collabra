@@ -24,7 +24,7 @@ export default class SideMenu extends React.Component {
             <div>
                 <div className="SideMenu-header">
                     <div>                    
-                    <Button  variant="primary" size="lg" onClick={()=>{this.setState(state => ({modal1Open: true}))}}>
+                    <Button  variant="primary" size="lg" block onClick={()=>{this.setState(state => ({modal1Open: true}))}}>
                             Notifications
                     </Button>                   
                     </div>
@@ -32,7 +32,7 @@ export default class SideMenu extends React.Component {
                         <Accordion>
                             <Card>
                                 <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="primary" eventKey="0">
+                                    <Accordion.Toggle as={Button} variant="primary" size="lg" block size="lg" eventKey="0">
                                         Friends
                                     </Accordion.Toggle>
                                 </Card.Header>
