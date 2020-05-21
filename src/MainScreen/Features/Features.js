@@ -1,7 +1,9 @@
 import React from 'react';
 import './Features.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
+import icon from '../../metronome.png'
 
 export default class Features extends React.Component {
     render() {
@@ -9,13 +11,18 @@ export default class Features extends React.Component {
             <div className="Features-header">
                 <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
                     <Tab eventKey="home" title="Home">
-                        <p>memememe</p>
+                    <img src={icon} />
                     </Tab>
                     <Tab eventKey="profile" title="Profile">
-                        <p>memememe</p>
+                    <p>dfadad</p>
+                    <p>dfadad</p>
+                    <p>dfadad</p>
+                    <p>dfadad</p>
+                    <p>dfadad</p>
+                    <p>dfadad</p>
                     </Tab>
                     <Tab eventKey="contact" title="Contact">
-                        <p>memememe</p>
+                        <p>dgdgg</p>
                     </Tab>
                 </Tabs>
             </div>
