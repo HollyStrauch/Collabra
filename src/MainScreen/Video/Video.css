@@ -12,7 +12,7 @@
 
 .Video-iconDisplay {
   background-color: #c4c4c4;
-  flex:2;
+  flex:5;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -20,13 +20,13 @@
 }
 
 .Video-icon {
-  max-width:100%;
-  max-height:100%;
+  max-width:50%;
+  max-height:auto;
 }
 
 .Video-display {
   background-color: #eea7a7;
-  flex: 1;
+  flex: 2;
   padding-top: 10px;
   padding-bottom: 20px;
   padding-right: 20px;
