@@ -16,7 +16,7 @@ export default class Features extends React.Component {
                     <Tab eventKey="profile" title="Profile">
                         <p>memememe</p>
                     </Tab>
-                    <Tab eventKey="contact" title="Contact" className="Features-filetab">
+                    <Tab eventKey="files" title="Files" className="Features-filetab">
                         <Files />
                     </Tab>
                 </Tabs>
