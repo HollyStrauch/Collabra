@@ -9,6 +9,7 @@ import ReactModal from 'react-modal';
 import  Button from 'react-bootstrap/button';
 import {Accordion} from 'react-bootstrap';
 import {Card} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class SideMenu extends React.Component {
     constructor(props) {
