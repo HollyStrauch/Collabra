@@ -1,11 +1,11 @@
 import React from 'react';
 import './Files.css';
 import Filename from './Filename';
-import { Element,  animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element} from 'react-scroll'
 import  Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-var items = ["Filename1", "Filename2", "Filename3", "Filename1", "Filename2", "Filename3"];
+var items = ["Filename1", "Filename2", "Filename3", "Filename4", "Filename5", "Filename6"];
 
 export default class Files extends React.Component {
     render() {
@@ -18,7 +18,7 @@ export default class Files extends React.Component {
                     overflow: 'scroll',
                 }}>
                     <ul>
-                        {items.map((item) => <Filename key={item.key} name={item} />)}
+                        {items.map((item) => <Filename key={item.toString()} name={item} />)}
 
                     </ul>
                 </Element>
