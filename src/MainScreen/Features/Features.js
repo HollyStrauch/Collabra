@@ -3,6 +3,7 @@ import './Features.css'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import Files from './Files/Files'
+import Tools from './Tools/Tools'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class Features extends React.Component {
@@ -16,8 +17,11 @@ export default class Features extends React.Component {
                     <Tab eventKey="profile" title="Profile">
                         <p>memememe</p>
                     </Tab>
-                    <Tab eventKey="files" title="Files" className="Features-filetab">
+                    <Tab eventKey="files" title="Files">
                         <Files />
+                    </Tab>
+                    <Tab eventKey="tools" title="Tools">
+                        <Tools />
                     </Tab>
                 </Tabs>
             </div>
