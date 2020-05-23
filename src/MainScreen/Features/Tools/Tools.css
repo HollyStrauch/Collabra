@@ -3,7 +3,34 @@
     overflow-y: scroll;
 }
 
-.Tools-metronome {
-    
+.Tools-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
+.Tools-metronome {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Tools-metSelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Tools-sharing {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(3px + 2vmin);
+    justify-content: space-around;
+}
+
+.Tools-button {
+    width: 100%
 }
