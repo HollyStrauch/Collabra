@@ -5,9 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default class Filename extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+
 
     render() {
         return (
