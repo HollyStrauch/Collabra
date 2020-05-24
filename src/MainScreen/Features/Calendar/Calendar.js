@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { render } from '@testing-library/react';
 import CalendarTable from './Calendar-Table.js';
 
-var days = [
+var days = [ /**days to fill the Calendar-Table */
     {sunday: 1, monday: 2, tuesday: 3, wednesday: 4, thursday: 5, friday: 6, saturday: 7},
     {sunday: 8, monday: 9, tuesday: 10, wednesday: 11, thursday: 12, friday: 13, saturday: 14},
     {sunday: 15, monday: 16, tuesday: 17, wednesday: 18, thursday: 19, friday: 20, saturday: 21},
