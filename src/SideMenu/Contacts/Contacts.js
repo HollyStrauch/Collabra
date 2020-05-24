@@ -1,11 +1,12 @@
 import React from 'react';
 import './Contacts.css';
-import contactName from './contactName';
+import ContactName from './ContactName';
 import { Element,  animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import  Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-var items = ["Axl Rose", "Slash", "Michael Scott", "Jim Halpert", "Pam Beasley", "Stanley Hudson"];
+var people = ["Axl Rose", "Slash", "Michael Scott", "Jim Halpert", "Pam Beasley", "Stanley Hudson", "Dwight Schrute", "Phyllis",
+"Kevin Malone", "Meredith", "Creed Bratton", "Jan", "David Wallace"];
 
 export default class Contacts extends React.Component {
     render() {
@@ -14,16 +15,16 @@ export default class Contacts extends React.Component {
             <div >
                 <Element className="element" id="containerElement" style={{
                     position: 'relative',
-                    height: '625px',
+                    height: '598px',
                     overflow: 'scroll',
                 }}>
                     <ul>
-                        {items.map((item) => <contactName key={item.key} name={item} />)}
+                        {people.map((item) => <ContactName key={item.key} name={item} />)}
 
                     </ul>
                 </Element>
-                <div className="Contacts-header">
-                    <Button  variant="primary" block size="sm">Add Contact</Button>                                        
+                <div className="addContact">
+                    <Button  variant="outline-success" block size="lg">Add Contact</Button>                                        
                 </div>
             </div>
         );
