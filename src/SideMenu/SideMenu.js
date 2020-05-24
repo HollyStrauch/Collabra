@@ -5,7 +5,7 @@ http://reactcommunity.org/react-modal/
 
 import React from 'react';
 import './SideMenu.css';
-import './Contacts/contactFeatures.css';
+import './Contacts/ContactFeatures.css';
 import ReactModal from 'react-modal';
 import  Button from 'react-bootstrap/button';
 import {Accordion, Modal} from 'react-bootstrap';
@@ -40,11 +40,11 @@ export default class SideMenu extends React.Component {
                                 
                             <Accordion.Collapse eventKey="0">
                                 <div className="contactFeatures-header">
-                                    <Card variant="dark">
+                                    
                                 
                                     <Contacts/>
                                 
-                                    </Card>
+                                    
                                 </div>
                             </Accordion.Collapse>
                         </Accordion>                                          

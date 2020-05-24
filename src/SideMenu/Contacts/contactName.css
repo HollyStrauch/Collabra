@@ -1,7 +1,7 @@
 .contactName-header {
     display: flex;
     flex: 1;
-    align-content: center;
+    align-content: left;
     flex-direction: row;
     justify-content: space-between;
     border: 3px solid #21A9AD;
@@ -15,7 +15,6 @@
 }
 
 .contactName-button {
-    background-color: rgb(55, 73, 235);
     border: none;
     color: white;
     padding: 5px 10px;
@@ -26,4 +25,5 @@
     cursor: pointer;
     position: relative;
     right: 5px;
+    float: left;
 }
