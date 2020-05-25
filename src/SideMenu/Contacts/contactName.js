@@ -1,5 +1,5 @@
 import React from 'react';
-import './contactName.css';
+import './ContactName.css';
 import  Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
