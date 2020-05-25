@@ -1,9 +1,8 @@
 .SideMenu-header {
     min-height: 100vh;
-    background-color: #B5E7A8;
+    background-color: rgb(215, 240, 202);
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    border: 3px solid #73AD21;
   }
