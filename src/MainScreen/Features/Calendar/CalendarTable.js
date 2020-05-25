@@ -12,28 +12,45 @@ import { render } from '@testing-library/react';
  * 
  */
 
-function Square(props) {
-    return (
-        <button className='square' onClick={props.onClick}>
-            {props.value}
-        </button>
-    );
-}
+/*function Square(props) {
+    render() {
+        return (
+            <button 
+                className='square' 
+                onClick={() => this.props.onClick()}
+            >
+                {this.props.value}
+            </button>
+        );
+    }
+}*/
 
- class CalendarTable extends React.Component{
+class mainCalendar extends React.Component{
 
     constructor(props){
         super(props);
-        //this.state = {i};
+        this.state = {
+            squares: Array(35).fill(null),
+        };
     }
+
+}
+
+export default class CalendarTable extends React.Component {
 
     renderDay(i) {
         return (
             <Square
                 value={i}
-                onClick={() => this.props.onClick(i)}
+                onClick={() => this.isClicked(i)}
             />
         );
+    }
+
+    isClicked(i) {
+        const squares = this.state.squares.slice();
+        squares[i] = 'blue';
+        this.setState({squares: squares});
     }
 
     render() {
@@ -90,3 +107,4 @@ function Square(props) {
     }
 
  }
+
