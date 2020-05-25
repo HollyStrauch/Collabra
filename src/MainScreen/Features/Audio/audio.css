@@ -6,7 +6,6 @@
 .settings-header {
     display: flex;
     flex-direction: column;
-    background-color: cornflowerblue;
     padding-right: 500px;
 }
 
@@ -23,7 +22,6 @@
 .volume-header {
     display: flex;
     flex-direction: column;
-    background-color: darkviolet;
     align-items: flex-start;
 }
 
