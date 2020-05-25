@@ -34,7 +34,7 @@ export default class SideMenu extends React.Component {
                     <div>
                         <Accordion defaultActiveKey="0" bg="dark">
                             
-                            <Accordion.Toggle as={Button} variant="dark" size="lg" block size="lg" eventKey="0">
+                            <Accordion.Toggle as={Button} variant="success" size="lg" block size="lg" eventKey="0">
                                 Collaborators
                             </Accordion.Toggle>
                                 

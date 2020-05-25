@@ -24,7 +24,7 @@ export default class Contacts extends React.Component {
                     </ul>
                 </Element>
                 <div className="addContact">
-                    <Button  variant="outline-success" block size="lg">Add Contact</Button>                                        
+                    <Button  variant="outline-info" block size="lg">Add Contact</Button>                                        
                 </div>
             </div>
         );
