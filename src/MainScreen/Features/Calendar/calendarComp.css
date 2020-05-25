@@ -6,7 +6,6 @@
 }
 
 .Appointments-header {
-    background-color: blueviolet;
     display: flex;
     flex-direction: column;
     font-size: large;
@@ -31,7 +30,6 @@
     padding-top: 200px;
 }
 .buttons {
-    background-color: lightcoral;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
