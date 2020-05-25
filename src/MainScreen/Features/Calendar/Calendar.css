@@ -33,6 +33,17 @@
     width: 250px;
     background: grey;
     line-height: 1em;
-    
+
 }
 
+.react-calendar__tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .50em;
+    padding: calc(.50em /.5) calc(.25em / .5);
+}
+
+&__tile {
+    max-width: 100%;
+}
