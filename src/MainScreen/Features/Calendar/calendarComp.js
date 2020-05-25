@@ -35,6 +35,7 @@ export default class calendar extends React.Component{
                     Appointments:
                     <Element className="element" id="containerElement" style={{
                         height: '200px',
+                        width: '400px',
                         overflow: 'scroll',
                     }}>
                         <ul>
@@ -47,6 +48,7 @@ export default class calendar extends React.Component{
                         Notes:
                         <Element className="element" id="containerElement" style={{
                             height: '200px',
+                            width: '400px',
                             overflow: 'scroll',
                         }}>
                             <ul>
@@ -58,7 +60,8 @@ export default class calendar extends React.Component{
                     </div>
                 
                 </div>
-                <div>
+                <div className='buttons'>
+
                     <div className="Appointments-button">
                             <Button variant="primary" size="small">New Appointment</Button>
                     </div>
@@ -66,6 +69,7 @@ export default class calendar extends React.Component{
                     <div className="Note-button">
                                 <Button variant="primary" size="small">New Note</Button>
                     </div>
+
                 </div>
 
             </div>
