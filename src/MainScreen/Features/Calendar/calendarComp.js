@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { render } from '@testing-library/react';
 import { Calendar } from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import calendarElement from './calendarElement.js';
 import {Element} from 'react-scroll';
 
 var appts = ["Appointment1","Appointment2","Appointment3","Appointment4"];
