@@ -19,12 +19,12 @@ export default class Contacts extends React.Component {
                     overflow: 'scroll',
                 }}>
                     <ul>
-                        {people.map((item) => <ContactName key={item.key} name={item} />)}
+                        {people.map((person) => <ContactName key={person.toString()} name={person} />)}
 
                     </ul>
                 </Element>
                 <div className="addContact">
-                    <Button  variant="outline-success" block size="lg">Add Contact</Button>                                        
+                    <Button  variant="outline-info" block size="lg">Add Contact</Button>                                        
                 </div>
             </div>
         );
