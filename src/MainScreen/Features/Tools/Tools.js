@@ -1,6 +1,6 @@
 import React from 'react';
 import './Tools.css';
-import RangedDropdown from './RangedDropdown'
+import RangedDropdown from '../RangedDropdown'
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Button from 'react-bootstrap/button';
