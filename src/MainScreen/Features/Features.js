@@ -4,7 +4,7 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import Files from './Files/Files'
 import Tools from './Tools/Tools'
-import Calendar from './Calendar/Calendar'
+import Calendar from './Calendar/calendar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class Features extends React.Component {
