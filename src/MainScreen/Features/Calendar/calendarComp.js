@@ -2,75 +2,72 @@ import React from 'react';
 import './calendarComp.css';
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { render } from '@testing-library/react';
 import { Calendar } from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import calendarElement from './calendarElement.js';
-import {Element} from 'react-scroll';
+import { Element } from 'react-scroll';
+import Entry from './Entry';
 
-var appts = ["Appointment1","Appointment2","Appointment3","Appointment4"];
+var appts = ["Appointment1", "Appointment2", "Appointment3", "Appointment4"];
 var notes = ["Note1", "Note2", "Note3", "Note4", "DeathNote"];
 
-export default class calendar extends React.Component{
-    
+export default class calendar extends React.Component {
+
     state = {
-        date: new Date(2020, 2, 1),
+        date: new Date(),
     }
 
-    onChange = date=> this.setState({ date })
-   
-    render() {
-        
-        return(
-            <div className="Calendar-header">
+    onChange = date => this.setState({ date })
 
-                <div className="date-Selector">
-                    <Calendar 
+    render() {
+
+        return (
+            <div className="calendarComp-header">
+
+                <div>
+                    <Calendar
                         onChange={this.onChange}
                         value={this.state.date}
+                        className="react-calendar__month-view__weekdays"
                     />
                 </div>
-                
-                <div className="Appointments-header">
+
+                <div className=".calendarComp-display">
                     Appointments:
                     <Element className="element" id="containerElement" style={{
-                        height: '200px',
+                        height: '150px',
                         width: '400px',
                         overflow: 'scroll',
+                        backgroundColor: 'white',
                     }}>
                         <ul>
-                            {appts.map((item) => <calendarElement key={item.toString()} name={item}/>)}
+                            {appts.map((item) => <Entry key={item.toString()} name={item} />)}
                         </ul>
 
                     </Element>
+                    <div className="calendarComp-button">
+                        <Button variant="primary" size="small">New Appointment</Button>
+                    </div>
+                </div>
 
-                    <div className="Note-header" /** needs text box relating to the selected date*/>
-                        Notes:
+                <div className=".calendarComp-display">
+                    Notes:
                         <Element className="element" id="containerElement" style={{
-                            height: '200px',
-                            width: '400px',
-                            overflow: 'scroll',
-                        }}>
-                            <ul>
-                                {notes.map((item) => <calendarElement key={item.toString()} name={item}/>)}
-                            </ul>
+                        height: '150px',
+                        width: '400px',
+                        overflow: 'scroll',
+                        backgroundColor: 'white',
+                    }}>
+                        <ul>
+                            {notes.map((item) => <Entry key={item.toString()} name={item} />)}
+                        </ul>
 
-                        </Element>
-
-                    </div>
-                
-                </div>
-                <div className='buttons'>
-
-                    <div className="Appointments-button">
-                            <Button variant="primary" size="small">New Appointment</Button>
-                    </div>
-                    
-                    <div className="Note-button">
-                                <Button variant="primary" size="small">New Note</Button>
+                    </Element>
+                    <div className="calendarComp-button">
+                        <Button variant="primary" size="small">New Note</Button>
                     </div>
 
                 </div>
+
 
             </div>
         );
