@@ -2,12 +2,12 @@
     min-height: 10vh;
     display: flex;
     flex: 1;
-    background-color: #282c34;
     align-content: center;
     flex-direction: row;
     font-size: calc(6px + 2vmin);
-    color: white;
-    border: 3px solid #21A9AD;
+    color: black;
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 25px;
   }
 
 .Video-iconDisplay {
@@ -17,6 +17,7 @@
   padding-bottom: 20px;
   padding-left: 30px;
   padding-right: 30px;
+  border-radius: 25px;
 }
 
 .Video-icon {
@@ -25,7 +26,6 @@
 }
 
 .Video-display {
-  background-color: #eea7a7;
   flex: 1;
   padding-top: 10px;
   padding-bottom: 20px;

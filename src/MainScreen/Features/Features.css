@@ -1,9 +1,8 @@
 .Features-header {
     min-height: 10vh;
-    background-color: #282c34;
-    align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
-    border: 3px solid #21A9AD;
+    color: black;
+    border: 1px solid rgb(172, 172, 172);
+    background-color: rgb(215, 240, 202);
+    border-radius: 25px;
   }
