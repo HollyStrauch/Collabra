@@ -17,13 +17,12 @@ export default class Contacts extends React.Component {
                     position: 'relative',
                     height: '598px',
                     overflow: 'scroll',
-                }}>
-                    <ul>
+                }}>        
+
                         {people.map((person) => <ContactName key={person.toString()} name={person} />)}
 
-                    </ul>
                 </Element>
-                <div className="addContact">
+                <div>
                     <Button  variant="outline-info" block size="lg">Add Contact</Button>                                        
                 </div>
             </div>

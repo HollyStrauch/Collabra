@@ -9,7 +9,7 @@
 
 .contactName-text {
     padding: 5px 10px;
-    font-size: 20px;
+    font-size: calc(5px + 1vmin);
     color: black;
     padding-left: 5px;
 }
