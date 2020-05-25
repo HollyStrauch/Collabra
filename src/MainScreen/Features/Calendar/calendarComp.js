@@ -31,7 +31,7 @@ export default class calendar extends React.Component {
                     />
                 </div>
 
-                <div className=".calendarComp-display">
+                <div>
                     Appointments:
                     <Element className="element" id="containerElement" style={{
                         height: '150px',
@@ -49,7 +49,7 @@ export default class calendar extends React.Component {
                     </div>
                 </div>
 
-                <div className=".calendarComp-display">
+                <div>
                     Notes:
                         <Element className="element" id="containerElement" style={{
                         height: '150px',
