@@ -5,6 +5,7 @@ import Tab from 'react-bootstrap/Tab'
 import Files from './Files/Files'
 import Tools from './Tools/Tools'
 import Calendar from './Calendar/calendarComp'
+import Audio from './Audio/audio'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class Features extends React.Component {
@@ -13,7 +14,7 @@ export default class Features extends React.Component {
             <div className="Features-header">
                 <Tabs defaultActiveKey="audio" id="feature-tabs">
                     <Tab eventKey="audio" title="Audio">
-                        <p>memememe</p>
+                        <Audio />
                     </Tab>
                     <Tab eventKey="calendar" title="Calendar">
                         <Calendar />

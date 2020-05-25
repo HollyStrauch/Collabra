@@ -23,6 +23,7 @@ export default class calendar extends React.Component{
         
         return(
             <div className="Calendar-header">
+
                 <div className="date-Selector">
                     <Calendar 
                         onChange={this.onChange}
@@ -33,8 +34,7 @@ export default class calendar extends React.Component{
                 <div className="Appointments-header">
                     Appointments:
                     <Element className="element" id="containerElement" style={{
-                        position: 'bottom',
-                        height: '100px',
+                        height: '200px',
                         overflow: 'scroll',
                     }}>
                         <ul>
@@ -43,28 +43,31 @@ export default class calendar extends React.Component{
 
                     </Element>
 
-                    <div className="Appointments-button">
-                        <Button variant="primary" size="small">New Appointment</Button>
-                    </div> 
+                    <div className="Note-header" /** needs text box relating to the selected date*/>
+                        Notes:
+                        <Element className="element" id="containerElement" style={{
+                            height: '200px',
+                            overflow: 'scroll',
+                        }}>
+                            <ul>
+                                {notes.map((item) => <calendarElement key={item.toString()} name={item}/>)}
+                            </ul>
 
+                        </Element>
+
+                    </div>
+                
                 </div>
-                <div className="Note-header" /** needs text box relating to the selected date*/>
-                    Notes:
-                    <Element className="element" id="containerElement" style={{
-                        position:'bottom',
-                        height: '100px',
-                        overflow: 'scroll',
-                    }}>
-                        <ul>
-                            {notes.map((item) => <calendarElement key={item.toString()} name={item}/>)}
-                        </ul>
-
-                    </Element>
-
+                <div>
+                    <div className="Appointments-button">
+                            <Button variant="primary" size="small">New Appointment</Button>
+                    </div>
+                    
                     <div className="Note-button">
-                        <Button variant="primary" size="small">New Note</Button>
+                                <Button variant="primary" size="small">New Note</Button>
                     </div>
                 </div>
+
             </div>
         );
     }
