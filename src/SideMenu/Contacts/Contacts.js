@@ -19,7 +19,7 @@ export default class Contacts extends React.Component {
                     overflow: 'scroll',
                 }}>
                     <ul>
-                        {people.map((item) => <ContactName key={item.key} name={item} />)}
+                        {people.map((person) => <ContactName key={person.toString()} name={person} />)}
 
                     </ul>
                 </Element>
