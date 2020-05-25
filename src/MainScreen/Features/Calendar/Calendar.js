@@ -3,7 +3,7 @@ import './Calendar.css';
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { render } from '@testing-library/react';
-import CalendarTable from './Calendar-Table.js';
+//import CalendarTable from './CalendarTable.js';
 
 
 export default class Calendar extends React.Component{
@@ -23,7 +23,7 @@ export default class Calendar extends React.Component{
         return(
             <div classname="Calendar-header">
                 <div className="date-Selector"/** Picture of the calendar, using an array of squares to be able to click on/specify a specific date */>
-                    <CalendarTable/>
+                    month/day
                     
                 </div>
                 <div className="Appointments-header" /** text box relating to the selected date */>
