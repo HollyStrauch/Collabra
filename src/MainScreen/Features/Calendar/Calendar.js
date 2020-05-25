@@ -1,10 +1,10 @@
 import React from 'react';
-import './Calendar.css';
+import './calendar.css';
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { render } from '@testing-library/react';
 import { Calendar } from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import 'react-calendar/dist/calendar.css';
 import calendarElement from './calendarElement.js';
 import {Element} from 'react-scroll';
 
