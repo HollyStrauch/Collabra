@@ -39,9 +39,9 @@ export default class calendar extends React.Component {
                         overflow: 'scroll',
                         backgroundColor: 'white',
                     }}>
-                        <ul>
+
                             {appts.map((item) => <Entry key={item.toString()} name={item} />)}
-                        </ul>
+                        
 
                     </Element>
                     <div className="calendarComp-button">
@@ -57,9 +57,9 @@ export default class calendar extends React.Component {
                         overflow: 'scroll',
                         backgroundColor: 'white',
                     }}>
-                        <ul>
+
                             {notes.map((item) => <Entry key={item.toString()} name={item} />)}
-                        </ul>
+
 
                     </Element>
                     <div className="calendarComp-button">
