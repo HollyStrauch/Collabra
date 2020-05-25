@@ -1,5 +1,5 @@
 import React from 'react';
-import './calendar.css';
+import './Calendar.css';
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { render } from '@testing-library/react';
