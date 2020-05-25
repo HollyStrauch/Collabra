@@ -1,39 +1,38 @@
 
-.weekOne{
-    display: flex;
 
-}
-.weekTwo{
+.Calendar-header {
     display: flex;
-    
-}
-.weekThree{
-    display: flex;
-    
-}
-.weekFour{
-    display: flex;
-    
+    flex-direction: row;
 }
 
 .Appointments-header {
     display: flex;
     font-size: large;
-    flex-direction: row;
+    justify-content: space-between;
 }
 .Appointments-button {
     display: flex;
     flex-direction: row;
+    align-self: flex-end;
 }
 
 .Note-header {
     display: flex;
     font-size: large;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .Note-button {
     display: flex;
     flex-direction: row;
+    align-self: flex-end;
+}
+
+.react-calendar {
+    width: 250px;
+    background: grey;
+    line-height: 1em;
+    
 }
 
