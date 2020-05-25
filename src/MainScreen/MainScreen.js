@@ -7,7 +7,7 @@ export default class MainScreen extends React.Component {
     render() {
         return (
             <div className="MainScreen-header">
-                Hello I am MainScreen box
+                Collabra!
                 <div className="MainScreen-VideoSize"><Video /></div>
                 <div className="MainScreen-TabsSize"><Tabs /></div>
             </div>
