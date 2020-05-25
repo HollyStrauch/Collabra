@@ -1,20 +1,39 @@
-.Calendar-header {
 
-
-}
-
-.Calendar-text {
-
+.weekOne{
+    display: flex;
 
 }
-
-.buttonTrue {
-    background-color: white;
+.weekTwo{
+    display: flex;
+    
+}
+.weekThree{
+    display: flex;
+    
+}
+.weekFour{
+    display: flex;
     
 }
 
-.buttonFalse {
-    background-color: lightblue;
+.Appointments-header {
+    display: flex;
+    font-size: large;
+    flex-direction: row;
+}
+.Appointments-button {
+    display: flex;
+    flex-direction: row;
 }
 
+.Note-header {
+    display: flex;
+    font-size: large;
+    flex-direction: row;
+}
+
+.Note-button {
+    display: flex;
+    flex-direction: row;
+}
 
