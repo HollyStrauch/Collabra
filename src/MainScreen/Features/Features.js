@@ -11,11 +11,11 @@ export default class Features extends React.Component {
     render() {
         return (
             <div className="Features-header">
-                <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-                    <Tab eventKey="home" title="Home">
+                <Tabs defaultActiveKey="audio" id="feature-tabs">
+                    <Tab eventKey="audio" title="Audio">
                         <p>memememe</p>
                     </Tab>
-                    <Tab eventKey="profile" title="Profile">
+                    <Tab eventKey="calendar" title="Calendar">
                         <Calendar />
                     </Tab>
                     <Tab eventKey="files" title="Files">
