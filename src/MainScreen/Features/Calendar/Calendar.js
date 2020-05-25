@@ -14,17 +14,16 @@ export default class Calendar extends React.Component{
     apptClick(i) {/**the appointment button clicked */
 
     }
-    noteClicke(i) {/** the notes button clicked */
+    noteClick(i) {/** the notes button clicked */
 
     }
-    /**click on a day of the calendar function needed */
 
     render() {
 
         return(
             <div classname="Calendar-header">
                 <div className="date-Selector"/** Picture of the calendar, using an array of squares to be able to click on/specify a specific date */>
-                    <p>Month / Year</p>
+                    <CalendarTable/>
                     
                 </div>
                 <div className="Appointments-header" /** text box relating to the selected date */>
