@@ -28,9 +28,11 @@
 .input-volume {
     display:flex;
     flex-direction: column;
+    padding: 30px;
 }
 .output-volume {
     display: flex;
     flex-direction: column;
+    padding: 30px;
 
 }
