@@ -1,4 +1,38 @@
 .audio-header {
+    display: flex;
+    flex-direction: row;
 
-    
+}
+.settings-header {
+    display: flex;
+    flex-direction: column;
+    background-color: cornflowerblue;
+    padding-right: 500px;
+}
+
+.talkButton {
+    align-self: start;
+
+}
+
+.performButton {
+    align-self: start;
+
+}
+
+.volume-header {
+    display: flex;
+    flex-direction: column;
+    background-color: darkviolet;
+    align-items: flex-start;
+}
+
+.input-volume {
+    display:flex;
+    padding: 25px;
+}
+.output-volume {
+    display: flex;
+    padding: 25px;
+    padding-bottom: 100px;
 }
