@@ -1,7 +1,3 @@
-.dropdown-menu {
-    height: 90px;
-    overflow-y: scroll;
-}
 
 .Tools-header {
     display: flex;
@@ -11,25 +7,39 @@
 }
 
 .Tools-metronome {
-    width: 250px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Tools-dropdown {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
 }
 
 .Tools-metselect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
 .Tools-inline {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .Tools-sharing {
-    width: 250px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     font-size: calc(3px + 2vmin);
@@ -37,5 +47,5 @@
 }
 
 .Tools-button {
-    width: 100%
+    width: 10%;
 }

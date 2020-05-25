@@ -20,25 +20,32 @@ export default class Files extends React.Component {
 
             <div className="Tools-header">
                 <div className="Tools-metronome">
+                    <div>
                     <h2>Metronome</h2>
+                    ON/OFF
+                    <Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />
+                    </div>
                     <div className = "Tools-metselect">
+                        <div className="Tools-dropdown">
                         BPM:
                         <RangedDropdown dropTitle="BPM" start={20} range={230} />
+                        </div>
+                        <div className="Tools-dropdown">
                         Beats Per Bar:
                         <RangedDropdown dropTitle="Beats Per Bar" start={1} range={32} />
+                        </div>
                     </div>
-            
-                    <Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />
-                    <Button variant="primary" size="small">Reset</Button>
+                    Measure Count: 0 <Button variant="outline-primary" size="small">Reset</Button>
                 </div>
+                
                 <div className="Tools-sharing">
                     <div className="Tools-inline">
                     Share Metronome
                         <Switch inputProps={{ 'aria-label': 'primary checkbox' }} />
                     </div>
                     <div className="Tools-inline">
-                        Record
-                        <button style={{ width: '15%' }}><img className="Tools-button" src={rec} alt="record" /></button>
+                        Record Video
+                        <input className="Tools-button" type="image" src={rec} />
                     </div>
 
                 </div>
