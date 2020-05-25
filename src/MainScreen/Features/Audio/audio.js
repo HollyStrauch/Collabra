@@ -2,6 +2,7 @@ import React from 'react';
 import './audio.css';
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Slider from './sliderComp';
 
 export default class audio extends React.Component {
 
@@ -18,9 +19,11 @@ export default class audio extends React.Component {
                 <div className="volume-header">
                     <div className='input-volume'>
                         Input Volume:
+                        <Slider>Input</Slider>
                     </div>
                     <div className='output-volume'>
                         Output Volume:
+                        <Slider>Output</Slider>
                     </div>
                 </div>
 
