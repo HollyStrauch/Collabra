@@ -7,8 +7,8 @@ export default class Video extends React.Component {
         return (
             <div className="Video-header">
                 <div className="Video-iconDisplay">
-                    <img className="Video-icon" src={icon} />
-                    <img className="Video-icon" src={icon} />
+                    <img className="Video-icon" src={icon} alt="Video1" />
+                    <img className="Video-icon" src={icon} alt="Video2" />
                 </div>
                 <div className="Video-display">
                     <p>In Call With:</p>
