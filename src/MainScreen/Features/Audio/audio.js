@@ -18,12 +18,7 @@ export default class audio extends React.Component {
                     <Button className="talkButton" size="small">Talk</Button>
                     <Button className="performButton" size="small">Perform</Button>
                     <div>
-                        <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                Range
-                            </Dropdown.Toggle>
-                        </Dropdown>
-                        
+
                         <DropdownButton id="dropdown-basic-button" title="Range">
                             <Dropdown.Item href='#/action-1'>Soprano</Dropdown.Item>
                             <Dropdown.Item href='#/action-2'>Alto</Dropdown.Item>
