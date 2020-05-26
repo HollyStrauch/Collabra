@@ -34,3 +34,8 @@
 .react-calendar__month-view__weekdays {
     font-size: .75em;
 }
+
+.react-calendar__navigation {
+    height: 44px;
+    margin-bottom: 0em;
+}
