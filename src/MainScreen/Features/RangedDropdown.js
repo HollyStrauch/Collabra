@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, DropdownButton, MenuItem } from 'react-bootstrap'
+import { Dropdown, DropdownButton } from 'react-bootstrap'
 import './RangedDropdown.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
