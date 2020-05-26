@@ -5,7 +5,7 @@ http://reactcommunity.org/react-modal/
 
 import React from 'react';
 import './SideMenu.css';
-import './Contacts/ContactFeatures.css';
+import './Contacts/contactFeatures.css';
 import ReactModal from 'react-modal';
 import  Button from 'react-bootstrap/button';
 import {Accordion, Modal} from 'react-bootstrap';
