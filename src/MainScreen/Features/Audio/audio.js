@@ -15,16 +15,21 @@ export default class audio extends React.Component {
                 <div className="settings-header">
                     Microphone Settings
                     <Button className="talkButton" size="small">Talk</Button>
-                    <Button className="performButton" size="small">Perform</Button>
-                    
-                </div>
-                <div>
-                    <DropdownButton id="dropdown-basic-button" title="Range">
-                        <Dropdown.Item href='#/action-1'>Soprano</Dropdown.Item>
-                        <Dropdown.Item href='#/action-2'>Alto</Dropdown.Item>
-                        <Dropdown.Item href='#/action-3'>Tenor</Dropdown.Item>
-                        <Dropdown.Item href='#/action-4'>Bass</Dropdown.Item>
-                    </DropdownButton>
+
+                    <div className="button-dropdown">
+
+                        <Button className="performButton" size="small">Perform</Button>
+        
+                        <div>
+                            <DropdownButton id="dropdown-basic-button" title="Range">
+                                <Dropdown.Item href='#/action-1'>Soprano</Dropdown.Item>
+                                <Dropdown.Item href='#/action-2'>Alto</Dropdown.Item>
+                                <Dropdown.Item href='#/action-3'>Tenor</Dropdown.Item>
+                                <Dropdown.Item href='#/action-4'>Bass</Dropdown.Item>
+                            </DropdownButton>
+                        </div>
+                    </div> 
+                       
                 </div>
 
                 <div className="volume-header">

@@ -7,23 +7,23 @@
     display: flex;
     flex-direction: column;
     padding-right: 500px;
+    justify-content: space-around;
 }
 
 .talkButton {
     align-self: start;
-    justify-content: space-between;
 
 }
 
 .performButton {
     align-self: start;
-    justify-content: space-between;
+
 }
 
 .volume-header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
 }
 
 .input-volume {
@@ -37,6 +37,8 @@
     padding: 30px;
 
 }
-.dropDown-header {
-    align-self: flex-end;
+.button-dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
