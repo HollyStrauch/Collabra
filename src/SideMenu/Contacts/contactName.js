@@ -1,14 +1,10 @@
 import React from 'react';
-import './contactName.css';
+import './ContactName.css';
 import  Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default class ContactName extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="contactName-header">
