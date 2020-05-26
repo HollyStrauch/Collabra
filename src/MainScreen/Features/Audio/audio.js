@@ -3,14 +3,14 @@ import './audio.css';
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from './sliderComp';
-import { Dropdown, ButtonGroup } from 'react-bootstrap'
+import { Dropdown, DropdownButton } from 'react-bootstrap'
 
 var ranges = ["Soprano", "Alto", "Tenor", "Bass"];
 
 export default class audio extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { dropTitle: "Perform" };
+        this.state = { dropTitle: "Range" };
     }
 
     render() {
@@ -24,16 +24,17 @@ export default class audio extends React.Component {
                     </div>
 
                     <div className="audio-button">
-
-                        <Dropdown as={ButtonGroup}>
-                            <Button variant="primary">{this.state.dropTitle}</Button>
-
-                            <Dropdown.Toggle split variant="primary" id="dropdown-split-basic" />
-
-                            <Dropdown.Menu>
-                                {ranges.map((item) => <Dropdown.Item key={item.toString()} onClick={() => { this.setState(state => ({ dropTitle: item })) }}>{item}</Dropdown.Item>)}
-                            </Dropdown.Menu>
-                        </Dropdown>
+                    <div className="audio-perform">
+                        <Button size="small">Perform</Button>
+                        </div>
+                        <DropdownButton bsstyle="default"
+                        
+                            bssize="small"
+                            title={this.state.dropTitle}
+                            key={1}
+                            id="dropdown-size-small">
+                            {ranges.map((item) => <Dropdown.Item key={item.toString()} onClick={() => { this.setState(state => ({ dropTitle: item })) }}>{item}</Dropdown.Item>)}
+                        </DropdownButton>
 
                     </div>
 
