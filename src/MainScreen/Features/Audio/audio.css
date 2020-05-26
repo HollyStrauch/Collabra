@@ -37,3 +37,6 @@
     padding: 30px;
 
 }
+.dropDown-header {
+    align-self: flex-end;
+}

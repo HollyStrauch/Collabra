@@ -3,7 +3,6 @@ import './audio.css';
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from './sliderComp';
-import dropDown from './dropDown';
 import { Dropdown, DropdownButton, MenuItem } from 'react-bootstrap'
 
 
@@ -17,15 +16,15 @@ export default class audio extends React.Component {
                     Microphone Settings
                     <Button className="talkButton" size="small">Talk</Button>
                     <Button className="performButton" size="small">Perform</Button>
-                    <div>
-
-                        <DropdownButton id="dropdown-basic-button" title="Range">
-                            <Dropdown.Item href='#/action-1'>Soprano</Dropdown.Item>
-                            <Dropdown.Item href='#/action-2'>Alto</Dropdown.Item>
-                            <Dropdown.Item href='#/action-3'>Tenor</Dropdown.Item>
-                            <Dropdown.Item href='#/action-4'>Bass</Dropdown.Item>
-                        </DropdownButton>
-                    </div>
+                    
+                </div>
+                <div>
+                    <DropdownButton id="dropdown-basic-button" title="Range">
+                        <Dropdown.Item href='#/action-1'>Soprano</Dropdown.Item>
+                        <Dropdown.Item href='#/action-2'>Alto</Dropdown.Item>
+                        <Dropdown.Item href='#/action-3'>Tenor</Dropdown.Item>
+                        <Dropdown.Item href='#/action-4'>Bass</Dropdown.Item>
+                    </DropdownButton>
                 </div>
 
                 <div className="volume-header">
