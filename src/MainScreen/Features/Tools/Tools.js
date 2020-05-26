@@ -2,7 +2,6 @@ import React from 'react';
 import './Tools.css';
 import RangedDropdown from '../RangedDropdown'
 import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import rec from './record.png'
@@ -45,7 +44,7 @@ export default class Files extends React.Component {
                     </div>
                     <div className="Tools-inline">
                         Record Video
-                        <input className="Tools-button" type="image" src={rec} />
+                        <input className="Tools-button" type="image" src={rec} alt="rec" />
                     </div>
 
                 </div>
