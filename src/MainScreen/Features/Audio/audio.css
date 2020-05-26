@@ -6,7 +6,8 @@
 .settings-header {
     display: flex;
     flex-direction: column;
-    padding-right: 500px;
+    padding-right: 250px;
+    padding-left: 250px;
     justify-content: space-around;
 }
 
