@@ -3,6 +3,9 @@ import './audio.css';
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from './sliderComp';
+import dropDown from './dropDown';
+import RangedDropdown from '../Tools/RangedDropdown';
+
 
 export default class audio extends React.Component {
 
@@ -14,6 +17,7 @@ export default class audio extends React.Component {
                     Microphone Settings
                     <Button className="talkButton" size="small">Talk</Button>
                     <Button className="performButton" size="small">Perform</Button>
+                    <RangedDropdown />
                 </div>
 
                 <div className="volume-header">

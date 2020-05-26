@@ -11,6 +11,7 @@
 
 .talkButton {
     align-self: start;
+    
 
 }
 
@@ -22,7 +23,7 @@
 .volume-header {
     display: flex;
     flex-direction: column;
-    
+    align-content: space-between;
 }
 
 .input-volume {
