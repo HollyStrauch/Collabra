@@ -14,11 +14,11 @@ export default class audio extends React.Component {
 
                 <div className="settings-header">
                     Microphone Settings
-                    <Button className="talkButton" size="small">Talk</Button>
+                    <Button size="small">Talk</Button>
 
                     <div className="button-dropdown">
 
-                        <Button className="performButton" size="small">Perform</Button>
+                        <Button size="small">Perform</Button>
         
                         <div>
                             <DropdownButton id="dropdown-basic-button" title="Range">

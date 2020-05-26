@@ -10,16 +10,6 @@
     justify-content: space-around;
 }
 
-.talkButton {
-    align-self: start;
-
-}
-
-.performButton {
-    align-self: start;
-
-}
-
 .volume-header {
     display: flex;
     flex-direction: column;
@@ -40,5 +30,10 @@
 .button-dropdown {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+.talkButton {
+    align-self: flex-start;
     justify-content: space-around;
 }
