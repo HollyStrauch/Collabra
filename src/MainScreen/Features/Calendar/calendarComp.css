@@ -20,14 +20,17 @@
 }
 
 .react-calendar {
-    width: 275px;
     max-width: 100%;
-    background: grey;
+    background: white;
     border: .15px solid rgb(160, 160,150);
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
 .react-calendar__tile {
+    font-size: .75em;
+}
+
+.react-calendar__month-view__weekdays {
     font-size: .75em;
 }
