@@ -11,19 +11,19 @@
 
 .talkButton {
     align-self: start;
-    
+    justify-content: space-between;
 
 }
 
 .performButton {
     align-self: start;
-
+    justify-content: space-between;
 }
 
 .volume-header {
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: space-between;
 }
 
 .input-volume {
