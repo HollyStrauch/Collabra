@@ -8,33 +8,23 @@
     flex-direction: column;
     padding-right: 250px;
     padding-left: 250px;
-    justify-content: space-around;
+    padding-top: 20px;
 }
 
 .volume-header {
     display: flex;
     flex-direction: column;
-
+    padding-bottom: 30px;
 }
 
-.input-volume {
+.audio-slider {
     display:flex;
     flex-direction: column;
     padding: 30px;
 }
-.output-volume {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
 
-}
-.button-dropdown {
+.audio-button {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-}
-
-.talkButton {
-    align-self: flex-start;
-    justify-content: space-around;
+    padding-top: 30px;
 }
