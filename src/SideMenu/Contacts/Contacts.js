@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default class Contacts extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { people: [] };
+        this.state = { people: [],  setInCall: props.setInCall };
     }
 
     componentDidMount() {
@@ -27,7 +27,7 @@ export default class Contacts extends React.Component {
                     overflow: 'scroll',
                 }}>        
 
-                        {this.state.people.map((person) => <ContactName key={person.toString()} name={person} />)}
+                        {this.state.people.map((person) => <ContactName key={person.toString()} name={person}  setInCall={this.state.setInCall}/>)}
 
                 </Element>
                 <div>
