@@ -5,10 +5,18 @@ import { Element } from 'react-scroll'
 import  Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-var people = ["Axl Rose", "Slash", "Michael Scott", "Jim Halpert", "Pam Beasley", "Stanley Hudson", "Dwight Schrute", "Phyllis",
-"Kevin Malone", "Meredith", "Creed Bratton", "Jan", "David Wallace"];
-
 export default class Contacts extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { people: [] };
+    }
+
+    componentDidMount() {
+        var tempArray = JSON.parse(localStorage.getItem('contacts'));
+        console.log(tempArray);
+        this.setState(state => ({ people: tempArray }));
+    }
+
     render() {
         return (
 
@@ -19,7 +27,7 @@ export default class Contacts extends React.Component {
                     overflow: 'scroll',
                 }}>        
 
-                        {people.map((person) => <ContactName key={person.toString()} name={person} />)}
+                        {this.state.people.map((person) => <ContactName key={person.toString()} name={person} />)}
 
                 </Element>
                 <div>
