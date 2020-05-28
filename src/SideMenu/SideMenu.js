@@ -19,6 +19,7 @@ export default class SideMenu extends React.Component {
         /* change this to true to make modal appear*/
         this.state = {modal1Open: false};
         this.state = {modal2Open: false};
+        this.state = {modal3Open: false};
       }
 
     render() {
