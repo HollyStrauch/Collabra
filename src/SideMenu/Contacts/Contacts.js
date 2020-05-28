@@ -5,9 +5,6 @@ import { Element } from 'react-scroll'
 import  Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-var people = ["Axl Rose", "Slash", "Michael Scott", "Jim Halpert", "Pam Beasley", "Stanley Hudson", "Dwight Schrute", "Phyllis",
-"Kevin Malone", "Meredith", "Creed Bratton", "Taika Waititi", "David Wallace"];
-
 export default class Contacts extends React.Component {
     constructor(props) {
         super(props);
