@@ -1,0 +1,39 @@
+import React from 'react';
+import Contacts from "./Contacts";
+import App from '../../App';
+
+
+export default class ContactFill extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    
+    Contacts.tempArray.Push(this.state.value);
+    console.log(Contacts.tempArray);
+    
+    
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" onClick={this.handleSubmit}/>
+      </form>
+    );
+  }
+}

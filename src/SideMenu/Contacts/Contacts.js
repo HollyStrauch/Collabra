@@ -1,9 +1,14 @@
 import React from 'react';
 import './Contacts.css';
-import ContactName from './contactName';
+import ContactName from './ContactName';
 import { Element } from 'react-scroll'
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ReactModal from 'react-modal';
+import { Modal } from 'react-bootstrap';
+import ContactFill from './ContactFill';
+
+
 
 export default class Contacts extends React.Component {
     constructor(props) {
@@ -37,8 +42,33 @@ export default class Contacts extends React.Component {
 
                 </Element>
                 <div>
-                    <Button variant="outline-info" block size="lg">Add Contact</Button>
+                    <Button
+                        variant="outline-info"
+                        block size="lg"
+                        onClick={() => {
+                            this.setState(state => ({ modal3Open: true }))
+                        }
+                        }
+                    >
+                        Add Contact
+                        </Button>
                 </div>
+                <ReactModal size="small" isOpen={this.state.modal3Open} onRequestClose={() => { this.setState(state => ({ modal3Open: false })) }}>
+                    <Modal.Header closeButton onClick={() => { this.setState(state => ({ modal3Open: false })) }}>
+                        <Modal.Title>Add Contact</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Who would you like to add?
+                       <ContactFill />
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => { this.setState(state => ({ modal3Open: false })) }}>
+                            Close
+                        </Button>
+                        <Button variant="primary" onClick={() => { this.setState(state => ({ modal3Open: false })) }}>
+                            Save Contact
+                        </Button>
+                    </Modal.Footer>
+                </ReactModal>
             </div>
         );
     }
