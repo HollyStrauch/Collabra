@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contacts.css';
-import ContactName from './ContactName';
+import ContactName from './contactName';
 import { Element } from 'react-scroll'
 import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
