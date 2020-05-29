@@ -11,6 +11,11 @@ var people = ["Axl Rose", "Slash", "Michael Scott", "Jim Halpert", "Pam Beasley"
 "Kevin Malone", "Meredith", "Creed Bratton", "Jan", "David Wallace"];
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { inCall: '' };
+  }
+
   componentDidMount () {
     if (!localStorage.getItem('contacts')){
       localStorage.setItem('contacts', JSON.stringify(people));
@@ -21,11 +26,15 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App-header">
-        <div className="App-SideMenu"><SideMenu /></div>
+        <div className="App-SideMenu"><SideMenu setInCall={this.inCall}/></div>
         
-        <div className="App-MainScreen"><MainScreen /></div>
+        <div className="App-MainScreen"><MainScreen inCall={this.state.inCall}/></div>
       </div>
     );
+  }
+
+  inCall = (name) => {
+    this.setState(state => ({ inCall: name}))
   }
 }
 

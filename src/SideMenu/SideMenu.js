@@ -16,10 +16,7 @@ import Contacts from './Contacts/Contacts';
 export default class SideMenu extends React.Component {
     constructor(props) {
         super(props);
-        /* change this to true to make modal appear*/
-        this.state = {modal1Open: false};
-        this.state = {modal2Open: false};
-        this.state = {modal3Open: false};
+        this.state = {modal1Open: false, modal2Open: false, setInCall: props.setInCall};
       }
 
     render() {
@@ -42,7 +39,7 @@ export default class SideMenu extends React.Component {
                                 <div className="contactFeatures-header">
                                     
                                 
-                                    <Contacts/>
+                                    <Contacts setInCall={this.state.setInCall}/>
                                 
                                     
                                 </div>
