@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default class ContactName extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {setInCall: props.setInCall };
+        this.state = {setInCall: props.setInCall, callAvailable: true};
     }
 
 
@@ -20,7 +20,7 @@ export default class ContactName extends React.Component {
                         variant="primary" 
                         size="sm"
                         onClick={() => { 
-                            this.props.setInCall(this.props.name) 
+                            this.props.setInCall(this.toggle()) 
                         }}>
                         Call</Button>
                 </div>
@@ -29,4 +29,12 @@ export default class ContactName extends React.Component {
             </div>
         );
     }
+
+    toggle(){
+        if (!this.props.inCall){
+            return this.props.name;
+        } 
+        return this.props.inCall;
+    }
+
 }

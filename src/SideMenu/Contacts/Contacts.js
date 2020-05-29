@@ -2,10 +2,10 @@ import React from 'react';
 import './Contacts.css';
 import ContactName from './contactName';
 import { Element } from 'react-scroll'
-import  Button from 'react-bootstrap/button';
+import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactModal from 'react-modal';
-import {Modal} from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import ContactFill from './ContactFill';
 
 
@@ -13,7 +13,7 @@ import ContactFill from './ContactFill';
 export default class Contacts extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { people: [],  setInCall: props.setInCall };
+        this.state = { people: [], setInCall: props.setInCall };
     }
 
     componentDidMount() {
@@ -30,30 +30,45 @@ export default class Contacts extends React.Component {
                     position: 'relative',
                     height: '598px',
                     overflow: 'scroll',
-                }}>        
+                }}>
 
-                        {this.state.people.map((person) => <ContactName key={person.toString()} name={person}  setInCall={this.state.setInCall}/>)}
+                    {this.state.people.map((person) =>
+                        <ContactName key={person.toString()}
+                            name={person}
+                            setInCall={this.state.setInCall}
+                            inCall={this.props.inCall}
+                        />
+                    )}
 
                 </Element>
                 <div>
-                    <Button  variant="outline-info" block size="lg" onClick={()=>{this.setState(state => ({modal3Open: true}))}}>Add Contact</Button>                                        
+                    <Button
+                        variant="outline-info"
+                        block size="lg"
+                        onClick={() => {
+                            this.setState(state => ({ modal3Open: true }))
+                        }
+                        }
+                    >
+                        Add Contact
+                        </Button>
                 </div>
-                <ReactModal size="small" isOpen={this.state.modal3Open} onRequestClose={()=>{this.setState(state => ({modal3Open: false}))}}>
-                    <Modal.Header closeButton onClick={()=>{this.setState(state => ({modal3Open: false}))}}>
-                    <Modal.Title>Add Contact</Modal.Title>
+                <ReactModal size="small" isOpen={this.state.modal3Open} onRequestClose={() => { this.setState(state => ({ modal3Open: false })) }}>
+                    <Modal.Header closeButton onClick={() => { this.setState(state => ({ modal3Open: false })) }}>
+                        <Modal.Title>Add Contact</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>Who would you like to add?
-                       <ContactFill/>
+                       <ContactFill />
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={()=>{this.setState(state => ({modal3Open: false}))}}>
+                        <Button variant="secondary" onClick={() => { this.setState(state => ({ modal3Open: false })) }}>
                             Close
                         </Button>
-                        <Button variant="primary" onClick={()=>{this.setState(state => ({modal3Open: false}))}}>
+                        <Button variant="primary" onClick={() => { this.setState(state => ({ modal3Open: false })) }}>
                             Save Contact
                         </Button>
                     </Modal.Footer>
-                 </ReactModal>   
+                </ReactModal>
             </div>
         );
     }

@@ -26,9 +26,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App-header">
-        <div className="App-SideMenu"><SideMenu setInCall={this.inCall}/></div>
+        <div className="App-SideMenu"><SideMenu setInCall={this.inCall} inCall={this.state.inCall}/></div>
         
-        <div className="App-MainScreen"><MainScreen inCall={this.state.inCall}/></div>
+        <div className="App-MainScreen"><MainScreen setInCall={this.inCall} inCall={this.state.inCall}/></div>
       </div>
     );
   }
