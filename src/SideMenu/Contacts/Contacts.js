@@ -43,7 +43,7 @@ export default class Contacts extends React.Component {
                 </Element>
                 <div>
                     <Button
-                        variant="outline-info"
+                        variant="info"
                         block size="lg"
                         onClick={() => {
                             this.setState(state => ({ modal3Open: true }))
@@ -57,7 +57,7 @@ export default class Contacts extends React.Component {
                     <Modal.Header closeButton onClick={() => { this.setState(state => ({ modal3Open: false })) }}>
                         <Modal.Title>Add Contact</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>Who would you like to add?
+                    <Modal.Body>Enter a Username or Email Address:
                        <ContactFill />
                     </Modal.Body>
                     <Modal.Footer>

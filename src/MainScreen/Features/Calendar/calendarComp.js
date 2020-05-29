@@ -37,7 +37,7 @@ export default class calendar extends React.Component {
                         height: '150px',
                         width: '400px',
                         overflow: 'scroll',
-                        backgroundColor: 'white',
+                        backgroundColor: ' #FFFDF5',
                     }}>
 
                             {appts.map((item) => <Entry key={item.toString()} name={item} />)}
@@ -55,7 +55,7 @@ export default class calendar extends React.Component {
                         height: '150px',
                         width: '400px',
                         overflow: 'scroll',
-                        backgroundColor: 'white',
+                        backgroundColor:  '#FFFDF5',
                     }}>
 
                             {notes.map((item) => <Entry key={item.toString()} name={item} />)}
