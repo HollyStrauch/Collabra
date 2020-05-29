@@ -17,6 +17,7 @@ export default class calendar extends React.Component {
     }
 
     onChange = date => this.setState({ date })
+    onClickDay = (value, event) => alert('Clicked day: ', value)
 
     render() {
 
@@ -28,6 +29,8 @@ export default class calendar extends React.Component {
                         onChange={this.onChange}
                         value={this.state.date}
                         className="react-calendar__month-view__weekdays"
+                        calendarType="US"
+                        onClickDay={this.onClickDay}
                     />
                 </div>
 
