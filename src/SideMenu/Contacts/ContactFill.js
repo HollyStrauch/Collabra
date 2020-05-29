@@ -19,8 +19,7 @@ export default class ContactFill extends React.Component {
   handleSubmit(event) {
     alert('A name was submitted: ' + this.state.value);
     
-    Contacts.tempArray.Push(this.state.value);
-    console.log(Contacts.tempArray);
+    
     
     
   }
