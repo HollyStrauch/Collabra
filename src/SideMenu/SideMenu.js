@@ -39,7 +39,7 @@ export default class SideMenu extends React.Component {
                                 <div className="contactFeatures-header">
                                     
                                 
-                                    <Contacts setInCall={this.state.setInCall}/>
+                                    <Contacts setInCall={this.state.setInCall} inCall={this.props.inCall}/>
                                 
                                     
                                 </div>
