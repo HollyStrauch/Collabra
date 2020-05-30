@@ -4,17 +4,33 @@ import ContactName from './ContactName';
 import { Element } from 'react-scroll'
 import  Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ReactModal from 'react-modal';
-import {Modal} from 'react-bootstrap';
-import ContactFill from './ContactFill';
+import Popup from "reactjs-popup";
 
 
 
 export default class Contacts extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { people: [],  setInCall: props.setInCall };
+        this.state = { people: [],  setInCall: props.setInCall, value: ''};
+    
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    this.setState({
+        people: this.state.people.concat(this.state.value)
+      });
+    this.componentDidMount();
+
+    
+    
+  }
 
     componentDidMount() {
         var tempArray = JSON.parse(localStorage.getItem('contacts'));
@@ -36,24 +52,40 @@ export default class Contacts extends React.Component {
 
                 </Element>
                 <div>
-                    <Button  variant="outline-info" block size="lg" onClick={()=>{this.setState(state => ({modal3Open: true}))}}>Add Contact</Button>                                        
+                <Popup
+                    trigger={<Button variant="outline-info" size="lg" block>Add Contact</Button>}
+                    modal
+                    closeOnDocumentClick
+                >
+                    {close => (
+                        <div className="popup">
+                            Who would you like to add?
+                            <div className="content">
+                                <div>
+                                <form onSubmit={this.handleSubmit}>
+                                    <label>
+                                        Name:
+                                    <input type="text" value={this.state.value} onChange={this.handleChange} />
+                                    </label>
+                                    <Button
+                                        variant="outline-info"
+                                        size="sm"
+                                        
+                                        onClick={() => {
+                                            console.log("modal closed ");
+                                            this.handleSubmit();
+                                            close();
+                                        }} >Add Contact</Button>
+                                    </form>
+                                </div>
+                            </div>
+ 
+                        </div>
+                    )}
+                </Popup>                                           
                 </div>
-                <ReactModal size="small" isOpen={this.state.modal3Open} onRequestClose={()=>{this.setState(state => ({modal3Open: false}))}}>
-                    <Modal.Header closeButton onClick={()=>{this.setState(state => ({modal3Open: false}))}}>
-                    <Modal.Title>Add Contact</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Who would you like to add?
-                       <ContactFill/>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={()=>{this.setState(state => ({modal3Open: false}))}}>
-                            Close
-                        </Button>
-                        <Button variant="primary" onClick={()=>{this.setState(state => ({modal3Open: false}))}}>
-                            Save Contact
-                        </Button>
-                    </Modal.Footer>
-                 </ReactModal>   
+ 
+                
             </div>
         );
     }
