@@ -28,7 +28,7 @@ export default class Contacts extends React.Component {
     }
 
     handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert('"' + this.state.value + '"' + ' was added to your contact list');
     this.setState({
         people: this.state.people.concat(this.state.value)
       });
@@ -71,14 +71,14 @@ export default class Contacts extends React.Component {
                                     <input type="text" value={this.state.value} onChange={this.handleChange} />
                                     </label>
                                     <Button
-                                        variant="outline-info"
+                                        variant="info"
                                         size="sm"
                                         block
                                         onClick={() => {
                                             console.log("modal closed ");
                                             this.handleSubmit();
                                             close();
-                                        }} >Add Contact</Button>
+                                        }} >Save</Button>
                                     </form>
                                 </div>
                             </div>
