@@ -8,6 +8,10 @@
     font-size: calc(10px + 2vmin);
     background-color: #86CC61;
     color: white;
+    background-image: url('../musicBackground.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
 .MainScreen-VideoSize {
