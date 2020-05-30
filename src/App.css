@@ -14,10 +14,9 @@
 
 .App-SideMenu {
   width: 250px;
-  height: 500px;
+  background-color: rgb(215, 240, 202);
 }
 
 .App-MainScreen {
   width: 100%;
-  height: 10px;
 }
