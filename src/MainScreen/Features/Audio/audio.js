@@ -25,7 +25,11 @@ export default class audio extends React.Component {
 
                     <div className="audio-button">
                     <div className="audio-perform">
-                        <Button size="small">Perform</Button>
+                        <Button 
+                            size="small"
+                            disabled={this.state.dropTitle === "Range" ? true: false}
+                        >
+                            Perform</Button>
                         </div>
                         <DropdownButton bsstyle="default"
                         
