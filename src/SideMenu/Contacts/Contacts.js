@@ -75,17 +75,18 @@ export default class Contacts extends React.Component {
                                         size="lg"
                                         block
                                         onClick={() => {
-                                            console.log("modal closed ");
                                             this.handleSubmit();
                                             close();
                                         }} >Save</Button>
                                         <Button
                                             variant="secondary"
                                             size="lg"
-                                            block                
+                                            block 
+                                            onClick={() => {
+                                                close();  
+                                            }}             
                                         >
                                         Cancel
-
                                         </Button>
                                     </form>
                                 </div>
