@@ -21,24 +21,21 @@ export default class Contacts extends React.Component {
     this.setState({value: event.target.value});
   }
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    this.setState({
-        people: this.state.people.concat(this.state.value)
-      });
-    this.componentDidMount();
-
-    
-    
-  }
-
     componentDidMount() {
         var tempArray = JSON.parse(localStorage.getItem('contacts'));
         console.log(tempArray);
         this.setState(state => ({ people: tempArray }));
     }
 
-    render() {
+    handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    this.setState({
+        people: this.state.people.concat(this.state.value)
+      });
+    this.componentDidMount();
+  }
+
+  render() {
         return (
 
             <div >
@@ -76,7 +73,7 @@ export default class Contacts extends React.Component {
                                     <Button
                                         variant="outline-info"
                                         size="sm"
-                                        
+                                        block
                                         onClick={() => {
                                             console.log("modal closed ");
                                             this.handleSubmit();
