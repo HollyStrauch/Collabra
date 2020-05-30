@@ -17,6 +17,7 @@ export default class calendar extends React.Component {
     }
 
     onChange = date => this.setState({ date })
+    onClickDay = (value, event) => alert('Clicked day: ', value)
 
     render() {
 
@@ -28,6 +29,8 @@ export default class calendar extends React.Component {
                         onChange={this.onChange}
                         value={this.state.date}
                         className="react-calendar__month-view__weekdays"
+                        calendarType="US"
+                        onClickDay={this.onClickDay}
                     />
                 </div>
 
@@ -37,7 +40,7 @@ export default class calendar extends React.Component {
                         height: '150px',
                         width: '400px',
                         overflow: 'scroll',
-                        backgroundColor: 'white',
+                        backgroundColor: ' #FFFDF5',
                     }}>
 
                             {appts.map((item) => <Entry key={item.toString()} name={item} />)}
@@ -55,7 +58,7 @@ export default class calendar extends React.Component {
                         height: '150px',
                         width: '400px',
                         overflow: 'scroll',
-                        backgroundColor: 'white',
+                        backgroundColor:  '#FFFDF5',
                     }}>
 
                             {notes.map((item) => <Entry key={item.toString()} name={item} />)}

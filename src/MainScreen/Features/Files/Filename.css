@@ -1,6 +1,7 @@
 .Filename-header {
     display: flex;
     flex: 1;
+    background-color:  #FFFDF5;
     align-content: center;
     flex-direction: row;
     justify-content: space-between;

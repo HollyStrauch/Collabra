@@ -1,8 +1,8 @@
 import React from 'react';
 import './Contacts.css';
-import ContactName from './ContactName';
+import ContactName from './contactName';
 import { Element } from 'react-scroll'
-import  Button from 'react-bootstrap/button';
+import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Popup from "reactjs-popup";
 
@@ -46,9 +46,15 @@ export default class Contacts extends React.Component {
                     position: 'relative',
                     height: '598px',
                     overflow: 'scroll',
-                }}>        
+                }}>
 
-                        {this.state.people.map((person) => <ContactName key={person.toString()} name={person}  setInCall={this.state.setInCall}/>)}
+                    {this.state.people.map((person) =>
+                        <ContactName key={person.toString()}
+                            name={person}
+                            setInCall={this.state.setInCall}
+                            inCall={this.props.inCall}
+                        />
+                    )}
 
                 </Element>
                 <div>

@@ -1,3 +1,5 @@
+//https://stackoverflow.com/questions/51480885/change-image-on-click-react
+
 import React from 'react';
 import './Tools.css';
 import RangedDropdown from '../RangedDropdown'
