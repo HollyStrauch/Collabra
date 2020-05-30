@@ -71,14 +71,22 @@ export default class Contacts extends React.Component {
                                     <input type="text" value={this.state.value} onChange={this.handleChange} />
                                     </label>
                                     <Button
-                                        variant="info"
-                                        size="sm"
+                                        variant="primary"
+                                        size="lg"
                                         block
                                         onClick={() => {
                                             console.log("modal closed ");
                                             this.handleSubmit();
                                             close();
                                         }} >Save</Button>
+                                        <Button
+                                            variant="secondary"
+                                            size="lg"
+                                            block                
+                                        >
+                                        Cancel
+
+                                        </Button>
                                     </form>
                                 </div>
                             </div>
