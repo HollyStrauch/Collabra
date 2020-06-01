@@ -39,3 +39,7 @@
     height: 44px;
     margin-bottom: 0em;
 }
+.appt-dropdown {
+    display: flex;
+    flex-direction: row;
+}

@@ -132,7 +132,7 @@ export default class calendar extends React.Component {
                                     </label>
                                     <label>
                                         New note:
-                                        <textarea/>
+                                        <textarea cols='70'/>
                                     </label>
                                 <div>
                                     <Button
