@@ -17,6 +17,10 @@ var notes = ["Note1", "Note2", "Note3", "Note4", "DeathNote"];
 export default class calendar extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            appointments: [],
+            notes: [],
+        };
        
     }
     state = {
@@ -26,11 +30,12 @@ export default class calendar extends React.Component {
 
     handleSave(){
         alert('An appointment was saved for' + this.state.date);
+         
         
     }
 
     onChange = date => this.setState({ date })
-    onClickDay = (value, event) => alert('Clicked day: ', value)
+    onClickDay = (value, event) => alert('Clicked day: ' + this.state.date)
 
     render() {
 
@@ -67,30 +72,49 @@ export default class calendar extends React.Component {
                             onOpen={() => { this.refreshAppointments() }}
                             closeOnDocumentClick
                         >
-                            <form onSave={this.handleSave}>
-                                <label>
-                                    Title of new appointment:
-                                    <input type="text" />
-                                </label>
-                                <label>
-                                    Appointment start time:
-                                    <DropdownButton title="Hour">
-                                        <ul>
+                            {close => (
+                                <form onSave={this.handleSave}>
+                                    <label>
+                                        Title of new appointment:
+                                        <input type="text" />
+                                    </label>
+                                    <label>
+                                        Appointment start time:
+                                        <DropdownButton title="Hour">
+                                            <ul>
 
-                                        </ul>
-                                    </DropdownButton>
-                                    <DropdownButton title="Minute"/>
-                                </label>
-                                <label>
-                                    Appointment end time:
-                                    <DropdownButton title="Hour"/>
-                                    <DropdownButton title="Minute"/>
-                                </label>
-                                <div>
-                                    <Button type="save" value="Save">Save</Button>
-                                </div>
-                            </form>
+                                            </ul>
+                                        </DropdownButton>
+                                        <DropdownButton title="Minute">
+                                            <ul>
 
+                                            </ul>
+                                        </DropdownButton>
+                                    </label>
+                                    <label>
+                                        Appointment end time:
+                                        <DropdownButton title="Hour">
+                                            <ul>
+                                            
+                                            </ul>
+                                        </DropdownButton>
+                                        <DropdownButton title="Minute">
+                                            <ul>
+
+                                            </ul>
+                                        </DropdownButton>
+                                    </label>
+                                    <div>
+                                        <Button 
+                                        type="save" 
+                                        value="Save"
+                                        onClick ={() =>{
+                                            console.log("modal closed");
+                                            close();
+                                        }}>Save</Button>
+                                    </div>
+                                </form>
+                            )}
                         </Popup>
                     </div>
                 </div>
@@ -141,6 +165,7 @@ export default class calendar extends React.Component {
     refreshAppointments(){
 
     }
+
     refreshNotes(){
 
     }
