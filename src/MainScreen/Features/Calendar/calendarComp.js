@@ -86,7 +86,9 @@ export default class calendar extends React.Component {
                                     <DropdownButton title="Hour"/>
                                     <DropdownButton title="Minute"/>
                                 </label>
-                                <Button type="save" value="Save">Save</Button>
+                                <div>
+                                    <Button type="save" value="Save">Save</Button>
+                                </div>
                             </form>
 
                         </Popup>
@@ -107,7 +109,26 @@ export default class calendar extends React.Component {
 
                     </Element>
                     <div className="calendarComp-button">
-                        <Button variant="primary" size="small">New Note</Button>
+                        <Popup
+                            trigger={ <Button variant="primary" size="small">New Note</Button>} position="right-center"
+                            modal
+                            onOpen={() => { this.refreshNotes() }}
+                            closeOnDocumentClick
+                        >
+                            <form>
+                                <label>
+                                    Title of new note:
+                                    <input type="text" />
+                                </label>
+                                <label>
+                                    New note:
+                                    <textarea/>
+                                </label>
+                            <div>
+                                <Button>Save</Button>
+                            </div>
+                            </form>
+                        </Popup>
                     </div>
 
                 </div>
