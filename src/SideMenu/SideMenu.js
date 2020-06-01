@@ -5,12 +5,13 @@ http://reactcommunity.org/react-modal/
 
 import React from 'react';
 import './SideMenu.css';
-import './Contacts/contactFeatures.css';
+import './Contacts/ContactFeatures.css';
 import ReactModal from 'react-modal';
 import Button from 'react-bootstrap/button';
 import { Accordion, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Contacts from './Contacts/Contacts';
+import Switch from '@material-ui/core/Switch';
 
 
 export default class SideMenu extends React.Component {
@@ -68,6 +69,24 @@ export default class SideMenu extends React.Component {
                         <Modal.Title>Account Settings</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>We are going to have all kinds of account settings here</Modal.Body>
+                    <div className="contactName-header">
+                    Link Twitter  <Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />   
+                    </div>
+                    <div className="contactName-header">
+                    Link Facebook <Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />   
+                    </div>
+                    <div className="contactName-header">
+                    Link Instagram<Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />   
+                    </div>
+                    <div className="contactName-header">
+                    Allow us to collect all of your data <Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />   
+                    </div>
+                    <div className="contactName-header">
+                    Require two-party authentication    <Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />   
+                    </div>
+                    <div className="contactName-header">
+                    E-mail me about your sweet promotions<Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />   
+                    </div>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => { this.setState(state => ({ modal2Open: false })) }}>
                             Close
