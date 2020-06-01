@@ -68,7 +68,7 @@ export default class SideMenu extends React.Component {
                     <Modal.Header closeButton onClick={() => { this.setState(state => ({ modal2Open: false })) }}>
                         <Modal.Title>Account Settings</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>We are going to have all kinds of account settings here</Modal.Body>
+                    <Modal.Body>CollabraUser@AOL.com</Modal.Body>
                     <div className="contactName-header">
                     Link Twitter  <Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />   
                     </div>
