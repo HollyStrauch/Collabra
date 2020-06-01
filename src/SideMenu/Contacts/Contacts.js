@@ -11,32 +11,34 @@ import Popup from "reactjs-popup";
 export default class Contacts extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { people: [],  setInCall: props.setInCall, value: ""};
-    
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    }
+        this.state = { people: [], setInCall: props.setInCall, value: "" };
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
     componentDidMount() {
         var tempArray = JSON.parse(localStorage.getItem('contacts'));
         console.log(tempArray);
         this.setState(state => ({ people: tempArray }));
-        
+    }
+
+    handleChange(event) {
+        this.setState({ value: event.target.value });
+        console.log(this.state.value)
     }
 
     handleSubmit(event) {
-    alert('"' + this.state.value + '"' + ' was added to your contact list');
-    this.setState({
-        people: this.state.people.concat(this.state.value)
-      });
-    this.componentDidMount();
-  }
+        alert('"' + this.state.value + '"' + ' was added to your contact list');
 
-  render() {
+        var tempArray = this.state.people;
+        tempArray = tempArray.concat(this.state.value);
+
+        this.setState(state => ({ people: tempArray }));
+        localStorage.setItem('contacts', JSON.stringify(this.state.people));
+    }
+
+    render() {
         return (
 
             <div >
@@ -56,49 +58,49 @@ export default class Contacts extends React.Component {
 
                 </Element>
                 <div>
-                <Popup
-                    trigger={<Button variant="outline-info" size="lg" block>Add Contact</Button>}
-                    modal
-                    closeOnDocumentClick
-                >
-                    {close => (
-                        <div className="popup">
-                            Who would you like to add?
-                            <div className="content">
-                                <div>
-                                <form onSubmit={this.handleSubmit}>
-                                    <label>
-                                        Name:
+                    <Popup
+                        trigger={<Button variant="outline-info" size="lg" block>Add Contact</Button>}
+                        modal
+                        closeOnDocumentClick
+                    >
+                        {close => (
+                            <div className="popup">
+                                Who would you like to add?
+                                <div className="content">
+                                    <div>
+                                        <form onSubmit={this.handleSubmit}>
+                                            <label>
+                                                Name:
                                     <input type="text" value={this.state.value} onChange={this.handleChange} />
-                                    </label>
-                                    <Button
-                                        variant="primary"
-                                        size="lg"
-                                        block
-                                        onClick={() => {
-                                            this.handleSubmit();
-                                            close();
-                                        }} >Save</Button>
-                                        <Button
-                                            variant="secondary"
-                                            size="lg"
-                                            block 
-                                            onClick={() => {
-                                                close();  
-                                            }}             
-                                        >
-                                        Cancel
+                                            </label>
+                                            <Button
+                                                variant="primary"
+                                                size="lg"
+                                                block
+                                                onClick={() => {
+                                                    this.handleSubmit();
+                                                    close();
+                                                }} >Save</Button>
+                                            <Button
+                                                variant="secondary"
+                                                size="lg"
+                                                block
+                                                onClick={() => {
+                                                    close();
+                                                }}
+                                            >
+                                                Cancel
                                         </Button>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
+
                             </div>
- 
-                        </div>
-                    )}
-                </Popup>                                           
+                        )}
+                    </Popup>
                 </div>
- 
-                
+
+
             </div>
         );
     }
