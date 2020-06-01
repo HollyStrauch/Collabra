@@ -6,14 +6,27 @@ import { Calendar } from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Element } from 'react-scroll';
 import Entry from './Entry';
+import Popup from "reactjs-popup";
+import { Dropdown, DropdownButton } from 'react-bootstrap';
+
+
 
 var appts = ["Appointment1", "Appointment2", "Appointment3", "Appointment4"];
 var notes = ["Note1", "Note2", "Note3", "Note4", "DeathNote"];
 
 export default class calendar extends React.Component {
-
+    constructor(props){
+        super(props);
+       
+    }
     state = {
         date: new Date(),
+    }
+
+
+    handleSave(){
+        alert('An appointment was saved for' + this.state.date);
+        
     }
 
     onChange = date => this.setState({ date })
@@ -48,7 +61,35 @@ export default class calendar extends React.Component {
 
                     </Element>
                     <div className="calendarComp-button">
-                        <Button variant="primary" size="small">New Appointment</Button>
+                        <Popup 
+                            trigger = {<Button variant="primary" size="small">New Appointment</Button>} position="right center"
+                            modal
+                            onOpen={() => { this.refreshAppointments() }}
+                            closeOnDocumentClick
+                        >
+                            <form onSave={this.handleSave}>
+                                <label>
+                                    Title of new appointment:
+                                    <input type="text" />
+                                </label>
+                                <label>
+                                    Appointment start time:
+                                    <DropdownButton title="Hour">
+                                        <ul>
+
+                                        </ul>
+                                    </DropdownButton>
+                                    <DropdownButton title="Minute"/>
+                                </label>
+                                <label>
+                                    Appointment end time:
+                                    <DropdownButton title="Hour"/>
+                                    <DropdownButton title="Minute"/>
+                                </label>
+                                <Button type="save" value="Save">Save</Button>
+                            </form>
+
+                        </Popup>
                     </div>
                 </div>
 
@@ -74,5 +115,12 @@ export default class calendar extends React.Component {
 
             </div>
         );
+    }
+
+    refreshAppointments(){
+
+    }
+    refreshNotes(){
+
     }
 }
