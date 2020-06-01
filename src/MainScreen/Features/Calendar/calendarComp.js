@@ -29,12 +29,6 @@ export default class calendar extends React.Component {
     }
 
 
-    handleSave(){
-        alert('An appointment was saved for' + this.state.date);
-         
-        
-    }
-
     onChange = date => this.setState({ date })
     onClickDay = (value, event) => alert('Clicked day: ' + this.state.date)
 
@@ -74,31 +68,39 @@ export default class calendar extends React.Component {
                             closeOnDocumentClick
                         >
                             {close => (
-                                <form onSave={this.handleSave}>
-                                    <label>
-                                        Title of new appointment:
-                                        <input type="text" />
-                                    </label>
-                                    <label>
-                                        Appointment start time:
-                                        <div>Hour: <RangedDropdown start={1} range={24}/></div>
-                                        <div>Minute: <RangedDropdown start={0} range={60}/></div>
-                                    </label>
-                                    <label>
-                                        Appointment end time:
-                                        <div>Hour: <RangedDropdown start={1} range={24}/></div>
-                                        <div>Minute: <RangedDropdown start={0} range={60}/></div>
-                                    </label>
-                                    <div>
-                                        <Button 
-                                        type="save" 
-                                        value="Save"
-                                        onClick ={() =>{
-                                            console.log("modal closed");
-                                            close();
-                                        }}>Save</Button>
-                                    </div>
-                                </form>
+                                <div className='appt-popup'>
+                                    <form>
+                                        <label>
+                                            Title of new appointment:
+                                            <input type="text" />
+                                        </label>
+                                        <div >
+                                            <label>
+                                                Appointment start time:
+                                                <div className='time'>Hour: <RangedDropdown start={1} range={24}/></div>
+                                                <div className='time'>Minute: <RangedDropdown start={0} range={60}/></div>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                Appointment end time:
+                                                <div className='time'>Hour: <RangedDropdown start={1} range={24}/></div>
+                                                <div className='time'>Minute: <RangedDropdown start={0} range={60}/></div>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <Button 
+                                            type="save" 
+                                            value="Save"
+                                            position="flex-end"
+                                            onClick ={() =>{
+                                                alert('Your appointment was saved');
+                                                console.log("modal closed");
+                                                close();
+                                            }}>Save</Button>
+                                        </div>
+                                    </form>
+                                </div>
                             )}
                         </Popup>
                     </div>
@@ -125,23 +127,26 @@ export default class calendar extends React.Component {
                             closeOnDocumentClick
                         >
                             {close => (
-                                <form>
-                                    <label>
-                                        Title of new note:
-                                        <input type="text" />
-                                    </label>
-                                    <label>
-                                        New note:
-                                        <textarea cols='70' rows='10'/>
-                                    </label>
-                                <div>
-                                    <Button
-                                        onClick={() => {
-                                            console.log("modal closed");
-                                            close();
-                                        }} >Save </Button>
+                                <div className='note-popup'>
+                                    <form>
+                                        <label>
+                                            Title of new note:
+                                            <input type="text" />
+                                        </label>
+                                        <label>
+                                            New note:
+                                            <textarea cols='70' rows='10'/>
+                                        </label>
+                                    <div>
+                                        <Button
+                                            onClick={() => {
+                                                alert('Your note was saved');
+                                                console.log("modal closed");
+                                                close();
+                                            }} >Save </Button>
+                                    </div>
+                                    </form>
                                 </div>
-                                </form>
                             )}
                         </Popup>
                     </div>
