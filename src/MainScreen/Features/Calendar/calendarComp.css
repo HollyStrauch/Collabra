@@ -12,7 +12,19 @@
     
 }
 
-.calendarComp-header-popup {
+.calendarComp-textarea {
+    resize: none;
+    font-size: medium;
+}
+
+.Note-header {
+    display: flex;
+    font-size: large;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popup {
     display: flex;
     flex-direction: column;
     background-color: rgb(215, 240, 202);
@@ -20,18 +32,6 @@
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 25px;
-    color: black;
-}
-
-.calendarComp-textbox {
-    font-size: medium;
-}
-
-.Note-header {
-    display: flex;
-    font-size: large;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .react-calendar {
@@ -55,20 +55,7 @@
     margin-bottom: 0em;
 }
 
-.note-popup {
-    font-size: 18px;
-}
-.appt-popup {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-}
-.time {
-    display:flex;
-    
-}
-.appt-times {
-    display: fles;
-    flex-direction: column;
+.calendarComp-time {
+    display: flex;
+    flex-direction: row;
 }

@@ -23,6 +23,8 @@ export default class calendar extends React.Component {
         this.state = {
             appointments: [],
             notes: [],
+            hr: '1',
+            min: '00',
         };
        
     }
@@ -65,7 +67,6 @@ export default class calendar extends React.Component {
                     <div className="calendarComp-button">
                         
                                          
-
                         <Popup 
                             trigger = {<Button variant="primary" size="small">New Appointment</Button>} position="right center"
                             modal
@@ -73,7 +74,7 @@ export default class calendar extends React.Component {
                             closeOnDocumentClick
                         >
                             {close => (
-                                <div className='appt-popup'>
+                                <div className='popup'>
                                     <form>
                                         <label>
                                             Title of new appointment:
@@ -81,23 +82,26 @@ export default class calendar extends React.Component {
                                         </label>
                                         <div >
                                             <label>
-                                                Appointment start time:
-                                                <div className='time'>Hour: <RangedDropdown start={1} range={24}/></div>
-                                                <div className='time'>Minute: <RangedDropdown start={0} range={60}/></div>
+                                                Start time:
+                                                <div className='calendarComp-time'>
+                                                    <RangedDropdown start={1} range={24} dropTitle={this.state.hr}/>
+                                                    :<RangedDropdown start={0} range={60} dropTitle={this.state.min}/>
+                                                </div>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                Appointment end time:
-                                                <div className='time'>Hour: <RangedDropdown start={1} range={24}/></div>
-                                                <div className='time'>Minute: <RangedDropdown start={0} range={60}/></div>
+                                                End time:
+                                                <div className='calendarComp-time'>
+                                                    <RangedDropdown start={1} range={24} dropTitle={this.state.hr}/>
+                                                    :<RangedDropdown start={0} range={60} dropTitle={this.state.min}/>
+                                                </div>
                                             </label>
                                         </div>
                                         <div>
                                             <Button 
                                                 onClick ={() =>{
                                                     alert('Your appointment was saved');
-                                                    console.log("modal closed");
                                                     close();
                                                 }}>Save</Button>
                                         </div>
@@ -118,9 +122,8 @@ export default class calendar extends React.Component {
                     }}>
 
                             {startNotes.map((item) => <Entry key={item.toString()} name={item} />)}
-
-
                     </Element>
+                    
                     <div className="calendarComp-button">
                         <Popup
                             trigger={ <Button variant="primary" size="small">New Note</Button>} position="right-center"
@@ -129,16 +132,18 @@ export default class calendar extends React.Component {
                             closeOnDocumentClick
                         >
                             {close => (
-                                <div className='note-popup'>
+                                <div className='popup'>
                                     <form>
+                                        <div className="Note-header">
                                         <label>
                                             Title of new note:
                                             <input type="text" />
                                         </label>
-                                        <label>
-                                            New note:
-                                            <textarea cols='70' rows='10'/>
+                                        New note:
+                                        <label> 
+                                            <textarea cols='60' rows='10' className="calendarComp-textarea"/>
                                         </label>
+                                        </div>
                                     <div>
                                         <Button
                                             onClick={() => {
