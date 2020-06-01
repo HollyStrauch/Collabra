@@ -5,10 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Calendar } from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Element } from 'react-scroll';
-import TextField from '@material-ui/core/TextField';
 import Popup from "reactjs-popup";
 import Entry from './Entry';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
 import RangedDropdown from '../RangedDropdown';
 
 
