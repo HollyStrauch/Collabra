@@ -139,19 +139,25 @@ export default class calendar extends React.Component {
                             onOpen={() => { this.refreshNotes() }}
                             closeOnDocumentClick
                         >
-                            <form>
-                                <label>
-                                    Title of new note:
-                                    <input type="text" />
-                                </label>
-                                <label>
-                                    New note:
-                                    <textarea/>
-                                </label>
-                            <div>
-                                <Button>Save</Button>
-                            </div>
-                            </form>
+                            {close => (
+                                <form>
+                                    <label>
+                                        Title of new note:
+                                        <input type="text" />
+                                    </label>
+                                    <label>
+                                        New note:
+                                        <textarea/>
+                                    </label>
+                                <div>
+                                    <Button
+                                        onClick={() => {
+                                            console.log("modal closed");
+                                            close();
+                                        }} >Save </Button>
+                                </div>
+                                </form>
+                            )}
                         </Popup>
                     </div>
 
