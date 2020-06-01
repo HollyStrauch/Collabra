@@ -8,27 +8,31 @@ import { Element } from 'react-scroll';
 import TextField from '@material-ui/core/TextField';
 import Popup from "reactjs-popup";
 import Entry from './Entry';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
+import RangedDropdown from '../RangedDropdown';
+
+
 
 var startAppts = ["Appointment1", "Appointment2", "Appointment3", "Appointment4"];
 var startNotes = ["Note1", "Note2", "Note3", "Note4", "DeathNote"];
 
 export default class calendar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { appts: [], notes: [] };
-    }
-    
-    componentDidMount () {
-        this.setState(state => ({appts: startAppts}));
-        this.setState(state => ({notes: startNotes}));
-    }
 
+    constructor(props){
+        super(props);
+        this.state = {
+            appointments: [],
+            notes: [],
+        };
+       
+    }
     state = {
         date: new Date(),
     }
 
+
     onChange = date => this.setState({ date })
-    onClickDay = (value, event) => alert('Clicked day: ', value)
+    onClickDay = (value, event) => alert('Clicked day: ' + this.state.date)
 
     render() {
 
@@ -54,57 +58,53 @@ export default class calendar extends React.Component {
                         backgroundColor: ' #FFFDF5',
                     }}>
 
-                            {this.state.appts.map((item) => <Entry key={item.toString()} name={item} />)}
+                            {startAppts.map((item) => <Entry key={item.toString()} name={item} />)}
                         
 
                     </Element>
                     <div className="calendarComp-button">
                         
-                        <Popup
-                    trigger={<Button variant="primary" size="small">New Appointment</Button>}
-                    modal
-                    closeOnDocumentClick
-                >
-                    {close => (
-                        <div className="calendarComp-header-popup">
-                            <div className="content">
-                                <div>
-                                <form onSubmit={this.handleSubmit}>
-                                    <label>
-                                    Enter new Appointment:
-                                    <input type="textarea" rows="6" cols="50" />
-                                    </label>
+                                         
 
-                                    <Button
-                                        variant="primary"
-                                        size="lg"
-                                        block
-                                        onClick={() => {
-                                            this.handleSubmit(this.state.appts);
-                                            close();
-                                        }} 
-                                    >
-                                        Save
-                                    </Button>
-                                    <Button
-                                        variant="secondary"
-                                        size="lg"
-                                        block 
-                                        onClick={() => {
-                                            close();  
-                                        }}             
-                                    >
-                                    Cancel
-                                    </Button>
-
+                        <Popup 
+                            trigger = {<Button variant="primary" size="small">New Appointment</Button>} position="right center"
+                            modal
+                            onOpen={() => { this.refreshAppointments() }}
+                            closeOnDocumentClick
+                        >
+                            {close => (
+                                <div className='appt-popup'>
+                                    <form>
+                                        <label>
+                                            Title of new appointment:
+                                            <input type="text" />
+                                        </label>
+                                        <div >
+                                            <label>
+                                                Appointment start time:
+                                                <div className='time'>Hour: <RangedDropdown start={1} range={24}/></div>
+                                                <div className='time'>Minute: <RangedDropdown start={0} range={60}/></div>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                Appointment end time:
+                                                <div className='time'>Hour: <RangedDropdown start={1} range={24}/></div>
+                                                <div className='time'>Minute: <RangedDropdown start={0} range={60}/></div>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <Button 
+                                                onClick ={() =>{
+                                                    alert('Your appointment was saved');
+                                                    console.log("modal closed");
+                                                    close();
+                                                }}>Save</Button>
+                                        </div>
                                     </form>
                                 </div>
-                            </div>
- 
-                        </div>
-                    )}
-                </Popup>                           
-
+                            )}
+                        </Popup>
                     </div>
                 </div>
 
@@ -117,12 +117,40 @@ export default class calendar extends React.Component {
                         backgroundColor:  '#FFFDF5',
                     }}>
 
-                            {this.state.notes.map((item) => <Entry key={item.toString()} name={item} />)}
+                            {startNotes.map((item) => <Entry key={item.toString()} name={item} />)}
 
 
                     </Element>
                     <div className="calendarComp-button">
-                        <Button variant="primary" size="small">New Note</Button>
+                        <Popup
+                            trigger={ <Button variant="primary" size="small">New Note</Button>} position="right-center"
+                            modal
+                            onOpen={() => { this.refreshNotes() }}
+                            closeOnDocumentClick
+                        >
+                            {close => (
+                                <div className='note-popup'>
+                                    <form>
+                                        <label>
+                                            Title of new note:
+                                            <input type="text" />
+                                        </label>
+                                        <label>
+                                            New note:
+                                            <textarea cols='70' rows='10'/>
+                                        </label>
+                                    <div>
+                                        <Button
+                                            onClick={() => {
+                                                alert('Your note was saved');
+                                                console.log("modal closed");
+                                                close();
+                                            }} >Save </Button>
+                                    </div>
+                                    </form>
+                                </div>
+                            )}
+                        </Popup>
                     </div>
 
                 </div>
@@ -132,9 +160,11 @@ export default class calendar extends React.Component {
         );
     }
 
-    handleSubmit(stateVar, newVal) {
-        this.setState({
-            stateVar: this.state.arr.concat(newVal)
-          })
+    refreshAppointments(){
+
+    }
+
+    refreshNotes(){
+
     }
 }

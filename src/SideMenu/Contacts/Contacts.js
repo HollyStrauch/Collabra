@@ -11,7 +11,7 @@ import Popup from "reactjs-popup";
 export default class Contacts extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { people: [],  setInCall: props.setInCall, value: ''};
+        this.state = { people: [],  setInCall: props.setInCall, value: ""};
     
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,6 +25,7 @@ export default class Contacts extends React.Component {
         var tempArray = JSON.parse(localStorage.getItem('contacts'));
         console.log(tempArray);
         this.setState(state => ({ people: tempArray }));
+        
     }
 
     handleSubmit(event) {
