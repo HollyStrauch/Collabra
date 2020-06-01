@@ -90,14 +90,11 @@ export default class calendar extends React.Component {
                                         </div>
                                         <div>
                                             <Button 
-                                            type="save" 
-                                            value="Save"
-                                            position="flex-end"
-                                            onClick ={() =>{
-                                                alert('Your appointment was saved');
-                                                console.log("modal closed");
-                                                close();
-                                            }}>Save</Button>
+                                                onClick ={() =>{
+                                                    alert('Your appointment was saved');
+                                                    console.log("modal closed");
+                                                    close();
+                                                }}>Save</Button>
                                         </div>
                                     </form>
                                 </div>
