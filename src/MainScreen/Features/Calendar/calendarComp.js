@@ -32,7 +32,7 @@ export default class calendar extends React.Component {
 
 
     onChange = date => this.setState({ date })
-    onClickDay = (value, event) => alert('Clicked day: ' + this.state.date)
+    //onClickDay = (value, event) => alert('Clicked day: ' + this.state.date)
 
     render() {
 
