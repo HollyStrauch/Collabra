@@ -3,3 +3,15 @@
     flex-direction: row;
     justify-content: left;
 }
+
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(215, 240, 202);
+    padding: 10px 5px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    color: black;
+}
