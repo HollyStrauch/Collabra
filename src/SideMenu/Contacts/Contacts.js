@@ -59,7 +59,7 @@ export default class Contacts extends React.Component {
                 </Element>
                 <div>
                     <Popup
-                        trigger={<Button variant="outline-info" size="lg" block>Add Contact</Button>}
+                        trigger={<Button variant="success" size="lg" block>Add Contact</Button>}
                         modal
                         closeOnDocumentClick
                     >

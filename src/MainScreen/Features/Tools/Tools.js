@@ -42,11 +42,11 @@ export default class Files extends React.Component {
                 <div className="Tools-sharing">
                     <div className="Tools-inline">
                     Share Metronome
-                        <Switch inputProps={{ 'aria-label': 'primary checkbox' }} />
+                        <Switch color="primary" inputProps={{ 'aria-label': 'primary checkbox' }} />
                     </div>
                     <div className="Tools-inline">
                         Record Video
-                        <input className="Tools-button" type="image" src={rec} alt="rec" />
+                        <Switch inputProps={{ 'aria-label': 'primary checkbox' }} />
                     </div>
 
                 </div>
